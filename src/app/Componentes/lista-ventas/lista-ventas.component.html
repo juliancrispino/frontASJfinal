@@ -1,0 +1,26 @@
+<h2>Lista ventas</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+  <tr>
+    <th>id</th>
+    <th>vendedor</th>
+    <th>precio total</th>
+    <th>cantidad productos</th>
+    <th>comision venta</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let venta of ventas">
+    <td>{{venta.id}}</td>
+    <td>{{venta.vendedor.nombre}}</td>
+    <td>${{venta.precioTotal}}</td>
+    <td>{{venta.cantidadProductos}}</td>
+    <td>${{venta.comisionVenta}}</td>
+
+
+  </tr>
+  </tbody>
+
+</table>
+

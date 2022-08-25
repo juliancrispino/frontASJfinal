@@ -1,0 +1,50 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center"> Registo de Vendedores</h3>
+
+  <form (ngSubmit)="onSubmit(formNuevoVendedor)" #formNuevoVendedor="ngForm">
+
+    <div class="form-group">
+      <label>Nombre: </label>
+      <input type="text"
+             class="form-control"
+             id="nombreVendedor"
+             [(ngModel)]="vendedor.nombre"
+             name="nombreVendedor">
+    </div>
+
+    <div class="form-group">
+      <label>Sueldo: </label>
+      <input type="number"
+             class="form-control"
+             id="sueldoVendedor"
+             [(ngModel)]="vendedor.sueldo"
+             name="sueldoVendedor">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+
+  </form>
+
+</div>
+
+
+
+<div>
+  <h2>Lista Vendedores</h2>
+  <table class="table table-striped">
+    <thead class="table-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Sueldo</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let vendedor of vendedores">
+      <td>{{vendedor.nombre}}</td>
+      <td>$ {{vendedor.sueldo}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center"> Registo de ventas</h3>
+
+  <form (ngSubmit)="onSubmit(formNuevaVenta)" #formNuevaVenta="ngForm">
+
+    <div class="form-group">
+      <label>ID vendedor: </label>
+      <input type="text"
+      class="form-control"
+      id="idvendedor"
+      [(ngModel)]="modelo.vendedor_id"
+      name="idvendedor">
+    </div>
+
+    <div class="form-group">
+      <label>ID Producto: </label>
+      <input type="text"
+      class="form-control"
+      id="idproducto"
+      [(ngModel)]="modelo.carrito.producto_id"
+      name="idproducto">
+    </div>
+
+    <div class="form-group">
+      <label>Cantidad: </label>
+      <input type="text"
+      class="form-control"
+      id="cantidad"
+      [(ngModel)]="modelo.carrito.cantidad"
+      name="cantidad">
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+
+  </form>
+
+</div>
